@@ -253,3 +253,68 @@ body {
   font-size: 0.85rem !important;
   padding: 8px 14px !important;
 }
+/* --- CABECERA Y NAVEGACIÓN MÓVIL PERFECCIONADA --- */
+.navbar-mobile {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 12px 20px !important;
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+}
+
+/* Botón Contacto a la izquierda */
+.btn-contacto-top {
+  background: #25d366 !important;
+  color: #ffffff !important;
+  padding: 8px 16px !important;
+  border-radius: 25px !important;
+  font-weight: 600 !important;
+  font-size: 0.85rem !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+/* Botón de 3 Rayas a la derecha */
+.menu-hamburguesa {
+  font-size: 1.6rem;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+/* Opciones Ocultas por defecto */
+.nav-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 20px;
+  background: #0f172a;
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  border-radius: 12px;
+  padding: 15px;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+}
+
+.nav-menu.active {
+  display: flex !important; /* Muestra las opciones al presionar las 3 rayas */
+}
+
+.nav-menu a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* --- TÍTULO PRINCIPAL CENTRADO Y SIN DESBORDAR EN CELULAR --- */
+.hero-content h2, .hero h1, h1 {
+  font-size: clamp(1.8rem, 7vw, 2.8rem) !important; /* Ajuste fluido para pantallas pequeñas */
+  text-align: center !important;
+  word-break: break-word !important; /* Evita que el texto sobrepase la pantalla */
+  max-width: 95% !important;
+  margin: 15px auto !important;
+}
