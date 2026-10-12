@@ -489,3 +489,27 @@ body {
     font-size: 0.7rem;
   }
 }
+/* --- COLORES DISTINTIVOS PARA LOS TÍTULOS DE LAS PLATAFORMAS --- */
+.card-product .title-netflix {
+  color: #e50914 !important; /* Rojo Netflix */
+  font-weight: 800;
+  text-shadow: 0 0 10px rgba(229, 9, 20, 0.3);
+}
+
+.card-product .title-disney {
+  color: #118aef !important; /* Azul Disney */
+  font-weight: 800;
+  text-shadow: 0 0 10px rgba(17, 138, 239, 0.3);
+}
+
+.card-product .title-amazon {
+  color: #00a8e1 !important; /* Celeste Prime Video */
+  font-weight: 800;
+  text-shadow: 0 0 10px rgba(0, 168, 225, 0.3);
+}
+
+.card-product .title-crunchyroll {
+  color: #f47521 !important; /* Naranja Crunchyroll */
+  font-weight: 800;
+  text-shadow: 0 0 10px rgba(244, 117, 33, 0.3);
+}
