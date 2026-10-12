@@ -1,72 +1,76 @@
-/* --- DISEÑO FIJO DE TARJETAS IGUAL A LA IMAGEN --- */
+/* --- CORRECCIÓN DE TAMAÑO DE LOGOS EN TARJETAS --- */
 .card-header {
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 15px;
+  overflow: hidden;
 }
 
 .logo-img {
-  max-height: 45px;
-  max-width: 140px;
+  max-height: 40px !important;
+  max-width: 130px !important;
+  width: auto !important;
+  height: auto !important;
   object-fit: contain;
 }
 
-/* RESALTADO ESPECIAL PARA LOGOS OSCUROS (Disney y Prime Video) */
+/* RESALTADO BRILLANTE PARA DISNEY Y PRIME VIDEO */
 .logo-bright {
   filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(0, 242, 254, 0.6)) !important;
 }
 
 .crunchy-logo-svg {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
 }
 
-/* Bordes resplandecientes por tarjeta */
+/* Asegurar diseño en grilla de las tarjetas */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.card-product {
+  background: rgba(15, 23, 42, 0.85);
+  border-radius: 16px;
+  padding: 25px;
+  text-align: left;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+/* Bordes y colores por tarjeta */
 .netflix-card {
   border: 1px solid rgba(229, 9, 20, 0.4) !important;
-  box-shadow: 0 0 15px rgba(229, 9, 20, 0.15) !important;
 }
-
 .disney-card {
   border: 1px solid rgba(17, 60, 207, 0.4) !important;
-  box-shadow: 0 0 15px rgba(17, 60, 207, 0.15) !important;
 }
-
 .amazon-card {
   border: 1px solid rgba(0, 168, 225, 0.4) !important;
-  box-shadow: 0 0 15px rgba(0, 168, 225, 0.15) !important;
 }
-
 .crunchy-card {
   border: 1px solid rgba(244, 117, 33, 0.4) !important;
-  box-shadow: 0 0 15px rgba(244, 117, 33, 0.15) !important;
 }
 
-/* Botones con color característico de cada marca */
-.btn-netflix {
-  background: #e50914 !important;
-}
+/* Botones */
+.btn-netflix { background: #e50914 !important; display: block; width: 100%; text-align: center; padding: 10px; border-radius: 10px; color: #fff; text-decoration: none; font-weight: 600; }
+.btn-disney { background: #113ccf !important; display: block; width: 100%; text-align: center; padding: 10px; border-radius: 10px; color: #fff; text-decoration: none; font-weight: 600; }
+.btn-amazon { background: #00a8e1 !important; display: block; width: 100%; text-align: center; padding: 10px; border-radius: 10px; color: #fff; text-decoration: none; font-weight: 600; }
+.btn-crunchy { background: #ff6600 !important; display: block; width: 100%; text-align: center; padding: 10px; border-radius: 10px; color: #fff; text-decoration: none; font-weight: 600; }
 
-.btn-disney {
-  background: #113ccf !important;
-}
-
-.btn-amazon {
-  background: #00a8e1 !important;
-}
-
-.btn-crunchy {
-  background: #ff6600 !important;
-}
-
-/* Etiqueta YAPE abajo */
+/* Insignia Yape */
 .payment-methods {
   text-align: center;
   margin-top: 12px;
 }
-
 .badge-yape {
   background: #712484;
   color: #ffffff;
@@ -76,5 +80,4 @@
   border-radius: 12px;
   letter-spacing: 1px;
   display: inline-block;
-  box-shadow: 0 2px 8px rgba(113, 36, 132, 0.4);
 }
