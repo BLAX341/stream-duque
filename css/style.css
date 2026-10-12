@@ -237,3 +237,19 @@ body {
     padding: 12px;
   }
 }
+/* --- ACOMODAR BOTÓN WHATSAPP A LA IZQUIERDA Y OCULTAR LOGO PEQUEÑO --- */
+.navbar .logo, header .logo, .nav-brand {
+  display: none !important; /* Oculta el texto chiquito duplicado */
+}
+
+.navbar, header nav {
+  justify-content: flex-start !important; /* Mueve el contenido a la izquierda */
+  padding: 10px 15px !important;
+}
+
+/* Botón de Contacto en la esquina superior izquierda */
+.btn-whatsapp, nav a[href*="wa.me"] {
+  margin-right: auto !important;
+  font-size: 0.85rem !important;
+  padding: 8px 14px !important;
+}
