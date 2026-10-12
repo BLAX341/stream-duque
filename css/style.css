@@ -309,3 +309,64 @@ body {
   position: relative;
   z-index: 2;
 }
+/* --- ALINEACIÓN PERFECTA DE TARJETAS Y EFECTO EN BOTONES --- */
+
+/* Estructura para que todas las tarjetas midan exactamente lo mismo */
+.card-product {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  height: 100% !important;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.card-body ul {
+  flex-grow: 1; /* Empuja el botón y la etiqueta Yape hacia abajo para que queden alineados */
+  margin-bottom: 20px;
+}
+
+/* Transición suave para los botones al tocar o pasar el mouse */
+.btn-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease !important;
+  cursor: pointer;
+}
+
+/* EFECTO DE RESPLANDOR (HOVER / TOUCH) EN CADA BOTÓN */
+
+/* Netflix (Resplandor Rojo) */
+.btn-netflix:hover,
+.btn-netflix:active {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.8), 0 0 35px rgba(229, 9, 20, 0.5) !important;
+  filter: brightness(1.2);
+}
+
+/* Disney+ (Resplandor Azul) */
+.btn-disney:hover,
+.btn-disney:active {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 0 20px rgba(17, 60, 207, 0.8), 0 0 35px rgba(17, 60, 207, 0.5) !important;
+  filter: brightness(1.2);
+}
+
+/* Prime Video (Resplandor Celeste) */
+.btn-amazon:hover,
+.btn-amazon:active {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 0 20px rgba(0, 168, 225, 0.8), 0 0 35px rgba(0, 168, 225, 0.5) !important;
+  filter: brightness(1.2);
+}
+
+/* Crunchyroll (Resplandor Naranja) */
+.btn-crunchy:hover,
+.btn-crunchy:active {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.8), 0 0 35px rgba(255, 102, 0, 0.5) !important;
+  filter: brightness(1.2);
+}
