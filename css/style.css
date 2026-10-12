@@ -1,515 +1,80 @@
-/* --- ESTILOS GENERALES Y RESET --- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: #080a0f;
-  color: #ffffff;
-}
-
-/* --- CABECERA MÓVIL Y LOGO DM --- */
-.navbar-mobile {
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  padding: 15px 25px !important;
-  width: 100% !important;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(8, 10, 15, 0.9);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.brand-left {
-  display: flex !important;
-  align-items: center !important;
-  gap: 15px !important;
-}
-
-.logo-dm {
-  font-size: 1.6rem !important;
-  font-weight: 900 !important;
-  text-decoration: none !important;
-  color: #ffffff !important;
-  letter-spacing: 1px !important;
-  padding: 6px 12px !important;
-  border-radius: 8px !important;
-  background: rgba(255, 255, 255, 0.08) !important;
-  border: 1px solid rgba(0, 242, 254, 0.3) !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  line-height: 1 !important;
-}
-
-.logo-dm span {
-  color: #00f2fe !important;
-  text-shadow: 0 0 10px #00f2fe, 0 0 20px #00f2fe !important;
-}
-
-.btn-contacto-top {
-  background: #25d366;
-  color: #ffffff;
-  padding: 8px 16px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-  transition: transform 0.3s ease;
-}
-
-.btn-contacto-top:hover {
-  transform: scale(1.05);
-}
-
-.menu-hamburguesa {
-  font-size: 1.5rem;
-  color: #ffffff;
-  cursor: pointer;
-}
-
-/* Menú Desplegable */
-.nav-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background: rgba(8, 10, 15, 0.95);
-  backdrop-filter: blur(15px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 25px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  transition: clip-path 0.4s ease-in-out;
-}
-
-.nav-menu.active {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-
-.nav-menu a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.nav-menu a:hover {
-  color: #00f2fe;
-}
-
-/* --- SECCIÓN HERO --- */
-.hero {
-  position: relative;
-  height: 90vh;
+/* --- DISEÑO FIJO DE TARJETAS IGUAL A LA IMAGEN --- */
+.card-header {
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 0 20px;
-  margin-top: 60px;
-}
-
-.particles-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-}
-
-.hero-content h1 {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  font-weight: 900;
-  color: #ffffff;
   margin-bottom: 15px;
 }
 
-.hero-content h1 span {
-  color: #00f2fe;
-  text-shadow: 0 0 20px rgba(0, 242, 254, 0.6);
+.logo-img {
+  max-height: 45px;
+  max-width: 140px;
+  object-fit: contain;
 }
 
-.hero-subtitle {
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  color: #e2e8f0;
-  margin-bottom: 15px;
-  font-weight: 600;
+/* RESALTADO ESPECIAL PARA LOGOS OSCUROS (Disney y Prime Video) */
+.logo-bright {
+  filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(0, 242, 254, 0.6)) !important;
 }
 
-.hero-desc {
-  color: #94a3b8;
-  font-size: 1rem;
-  margin-bottom: 30px;
+.crunchy-logo-svg {
+  width: 50px;
+  height: 50px;
 }
 
-.btn-main {
-  background: linear-gradient(135deg, #00c6ff, #0072ff);
-  color: #ffffff;
-  padding: 14px 32px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1rem;
-  box-shadow: 0 5px 20px rgba(0, 114, 255, 0.4);
-  display: inline-block;
-  transition: transform 0.3s ease;
+/* Bordes resplandecientes por tarjeta */
+.netflix-card {
+  border: 1px solid rgba(229, 9, 20, 0.4) !important;
+  box-shadow: 0 0 15px rgba(229, 9, 20, 0.15) !important;
 }
 
-.btn-main:hover {
-  transform: scale(1.05);
+.disney-card {
+  border: 1px solid rgba(17, 60, 207, 0.4) !important;
+  box-shadow: 0 0 15px rgba(17, 60, 207, 0.15) !important;
 }
 
-/* --- SECCIÓN PRODUCTOS / PLANES --- */
-.products-section {
-  padding: 80px 20px;
-  max-width: 1100px;
-  margin: 0 auto;
+.amazon-card {
+  border: 1px solid rgba(0, 168, 225, 0.4) !important;
+  box-shadow: 0 0 15px rgba(0, 168, 225, 0.15) !important;
 }
 
-.section-title {
+.crunchy-card {
+  border: 1px solid rgba(244, 117, 33, 0.4) !important;
+  box-shadow: 0 0 15px rgba(244, 117, 33, 0.15) !important;
+}
+
+/* Botones con color característico de cada marca */
+.btn-netflix {
+  background: #e50914 !important;
+}
+
+.btn-disney {
+  background: #113ccf !important;
+}
+
+.btn-amazon {
+  background: #00a8e1 !important;
+}
+
+.btn-crunchy {
+  background: #ff6600 !important;
+}
+
+/* Etiqueta YAPE abajo */
+.payment-methods {
   text-align: center;
-  font-size: 2rem;
-  font-weight: 800;
+  margin-top: 12px;
+}
+
+.badge-yape {
+  background: #712484;
   color: #ffffff;
-  margin-bottom: 40px;
-}
-
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 25px;
-}
-
-.card-product {
-  background: rgba(15, 23, 42, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 25px;
-  text-align: left;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, border-color 0.3s ease;
-  backdrop-filter: blur(10px);
-}
-
-.card-product:hover {
-  transform: translateY(-8px);
-  border-color: #00f2fe;
-}
-
-.card-product .badge {
-  background: rgba(0, 242, 254, 0.15);
-  color: #00f2fe;
   font-size: 0.75rem;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 20px;
-  display: inline-block;
-  margin-bottom: 12px;
-  border: 1px solid rgba(0, 242, 254, 0.3);
-}
-
-.card-product h3 {
-  color: #ffffff;
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.card-product .price {
-  font-size: 1.6rem;
-  color: #ffffff;
   font-weight: 800;
-  margin-bottom: 15px;
-}
-
-.card-product .price span {
-  font-size: 0.85rem;
-  color: #94a3b8;
-  font-weight: 400;
-}
-
-.card-product ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 20px;
-}
-
-.card-product ul li {
-  color: #cbd5e1;
-  font-size: 0.9rem;
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.card-product ul li i {
-  color: #00f2fe;
-  font-size: 0.85rem;
-}
-
-.card-product .btn-card {
-  display: block;
-  width: 100%;
-  background: linear-gradient(135deg, #00c6ff, #0072ff);
-  color: #ffffff;
-  text-align: center;
-  padding: 10px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: opacity 0.3s ease;
-}
-
-.card-product .btn-card:hover {
-  opacity: 0.9;
-}
-
-/* --- SECCIÓN NOSOTROS --- */
-.nosotros-section {
-  padding: 60px 20px;
-  background: rgba(15, 23, 42, 0.6);
-}
-
-.nosotros-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 40px;
-  align-items: center;
-}
-
-.badge-nosotros {
-  background: rgba(0, 242, 254, 0.1);
-  color: #00f2fe;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  border: 1px solid rgba(0, 242, 254, 0.3);
-  display: inline-block;
-  margin-bottom: 12px;
-}
-
-.nosotros-content h2 {
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 15px;
-  line-height: 1.2;
-}
-
-.nosotros-content p {
-  color: #94a3b8;
-  font-size: 1rem;
-  margin-bottom: 15px;
-  line-height: 1.6;
-}
-
-.nosotros-puntos {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 25px;
-}
-
-.punto-item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  background: rgba(255, 255, 255, 0.03);
-  padding: 12px 18px;
+  padding: 4px 14px;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.punto-item i {
-  font-size: 1.5rem;
-  color: #00f2fe;
-  width: 30px;
-  text-align: center;
-}
-
-.punto-item h4 {
-  color: #ffffff;
-  font-size: 1rem;
-  margin-bottom: 2px;
-}
-
-.punto-item p {
-  color: #64748b;
-  font-size: 0.85rem;
-  margin: 0;
-}
-
-.nosotros-card-stats {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px;
-  background: linear-gradient(145deg, #0f172a, #1e293b);
-  padding: 25px;
-  border-radius: 20px;
-  border: 1px solid rgba(0, 242, 254, 0.2);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-.stat-box {
-  text-align: center;
-  padding: 15px;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.03);
-}
-
-.stat-box i {
-  font-size: 1.8rem;
-  color: #00f2fe;
-  margin-bottom: 8px;
-}
-
-.stat-box h3 {
-  font-size: 1.8rem;
-  color: #ffffff;
-  font-weight: 800;
-}
-
-.stat-box p {
-  color: #94a3b8;
-  font-size: 0.85rem;
-  margin: 0;
-}
-
-/* --- SECCIÓN BENEFICIOS --- */
-.benefits {
-  padding: 80px 20px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-}
-
-.benefit-item {
-  background: rgba(15, 23, 42, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  padding: 30px;
-  border-radius: 16px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.benefit-item:hover {
-  transform: translateY(-5px);
-}
-
-.benefit-item i {
-  font-size: 2.5rem;
-  color: #00f2fe;
-  margin-bottom: 15px;
-}
-
-.benefit-item h3 {
-  color: #ffffff;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.benefit-item p {
-  color: #94a3b8;
-  font-size: 0.9rem;
-}
-
-/* --- PIE DE PÁGINA --- */
-.footer {
-  text-align: center;
-  padding: 30px;
-  background: #05070a;
-  color: #64748b;
-  font-size: 0.9rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-/* --- ADAPTACIÓN RESPONSIVE PARA MÓVILES --- */
-@media (max-width: 768px) {
-  .nosotros-container {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .nosotros-content h2 {
-    font-size: 1.7rem;
-  }
-
-  .nosotros-card-stats {
-    grid-template-columns: repeat(3, 1fr);
-    padding: 15px;
-    gap: 10px;
-  }
-
-  .stat-box {
-    padding: 10px 5px;
-  }
-
-  .stat-box i {
-    font-size: 1.3rem;
-  }
-
-  .stat-box h3 {
-    font-size: 1.2rem;
-  }
-
-  .stat-box p {
-    font-size: 0.7rem;
-  }
-}
-/* --- COLORES DISTINTIVOS PARA LOS TÍTULOS DE LAS PLATAFORMAS --- */
-.card-product .title-netflix {
-  color: #e50914 !important; /* Rojo Netflix */
-  font-weight: 800;
-  text-shadow: 0 0 10px rgba(229, 9, 20, 0.3);
-}
-
-.card-product .title-disney {
-  color: #118aef !important; /* Azul Disney */
-  font-weight: 800;
-  text-shadow: 0 0 10px rgba(17, 138, 239, 0.3);
-}
-
-.card-product .title-amazon {
-  color: #00a8e1 !important; /* Celeste Prime Video */
-  font-weight: 800;
-  text-shadow: 0 0 10px rgba(0, 168, 225, 0.3);
-}
-
-.card-product .title-crunchyroll {
-  color: #f47521 !important; /* Naranja Crunchyroll */
-  font-weight: 800;
-  text-shadow: 0 0 10px rgba(244, 117, 33, 0.3);
+  letter-spacing: 1px;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(113, 36, 132, 0.4);
 }
