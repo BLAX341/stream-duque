@@ -318,3 +318,16 @@ body {
   max-width: 95% !important;
   margin: 15px auto !important;
 }
+/* --- ESTILO PARA EL TEXTO "DM" AL COSTADO DE CONTACTO --- */
+.texto-dm {
+  margin-left: 6px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #ffffff; /* La 'D' sale de color blanco */
+  letter-spacing: 1px;
+}
+
+.letra-m {
+  color: #00f2fe; /* La 'M' sale con el color neón celeste igual a STREAM */
+  text-shadow: 0 0 8px rgba(0, 242, 254, 0.6);
+}
