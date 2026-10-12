@@ -362,3 +362,38 @@ body {
   transform: scale(1.08);
   border-color: #00f2fe;
 }
+/* --- CORRECCIÓN DE ALINEACIÓN PARA CUALQUIER PANTALLA --- */
+.navbar-mobile {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 15px 25px !important;
+  width: 100% !important;
+}
+
+.brand-left {
+  display: flex !important;
+  align-items: center !important;
+  gap: 15px !important;
+}
+
+/* Forzar colores e independizar el Logo DM */
+.logo-dm {
+  font-size: 1.6rem !important;
+  font-weight: 900 !important;
+  text-decoration: none !important;
+  color: #ffffff !important; /* D blanca en laptop y celular */
+  letter-spacing: 1px !important;
+  padding: 6px 12px !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(0, 242, 254, 0.3) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  line-height: 1 !important;
+}
+
+.logo-dm span {
+  color: #00f2fe !important; /* M celeste neón */
+  text-shadow: 0 0 10px #00f2fe, 0 0 20px #00f2fe !important;
+}
