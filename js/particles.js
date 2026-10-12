@@ -31,3 +31,7 @@ function createParticle(container) {
 
     container.appendChild(particle);
 }
+function toggleMenu() {
+  const menu = document.getElementById('navMenu');
+  menu.classList.toggle('active');
+}
