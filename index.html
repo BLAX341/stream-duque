@@ -12,21 +12,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
+<!-- CABECERA MÓVIL OPTIMIZADA -->
+  <header class="navbar-mobile">
+    <!-- Botón Contacto Arriba a la Izquierda -->
+    <a href="https://wa.me/51990516065?text=Hola,%20deseo%20información%20sobre%20las%20cuentas%20de%20streaming" class="btn-contacto-top" target="_blank">
+      <i class="fab fa-whatsapp"></i> Contacto
+    </a>
 
-    <!-- CABECERA -->
-    <header class="header">
-        <div class="logo">
-            <h1 class="brand-title">DUQUE<span class="highlight">STREAM</span></h1>
-        </div>
-        <nav class="nav">
-            <a href="#inicio">Inicio</a>
-            <a href="#productos">Planes</a>
-            <a href="#beneficios">Garantía</a>
-            <a href="https://wa.me/51990516065?text=Hola%20DUQUE%20STREAM,%20deseo%20mas%20información%20sobre%20los%20perfiles%20y%20precios%20exactos" target="_blank" class="btn-whatsapp">
-                <i class="fab fa-whatsapp"></i> Contacto
-            </a>
-        </nav>
-    </header>
+    <!-- Botón 3 Rayas (Hamburguesa) Arriba a la Derecha -->
+    <div class="menu-hamburguesa" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Menú Desplegable -->
+    <nav class="nav-menu" id="navMenu">
+      <a href="#inicio" onclick="toggleMenu()">Inicio</a>
+      <a href="#productos" onclick="toggleMenu()">Planes</a>
+      <a href="#beneficios" onclick="toggleMenu()">Garantía</a>
+    </nav>
+  </header>
 
     <!-- SECCIÓN PRINCIPAL (HERO) -->
     <section id="inicio" class="hero">
@@ -151,5 +155,11 @@
 
     <!-- Script de partículas dentro de la carpeta js -->
     <script src="js/particles.js"></script>
+    <script>
+  function toggleMenu() {
+    const menu = document.getElementById('navMenu');
+    menu.classList.toggle('active');
+  }
+</script>
 </body>
 </html>
