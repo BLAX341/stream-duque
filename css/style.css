@@ -1,374 +1,31 @@
-/* RESET Y FUENTES */
+/* --- ESTILOS GENERALES Y RESET --- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: #080a0f;
-    color: #f1f5f9;
-    line-height: 1.6;
-    overflow-x: hidden;
-    position: relative;
-}
-
-/* EFECTO DE PARTÍCULAS EN EL FONDO */
-#particles-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    z-index: 0;
-    overflow: hidden;
-}
-
-.particle {
-    position: absolute;
-    background: radial-gradient(circle, rgba(56, 189, 248, 0.9) 0%, rgba(0, 198, 255, 0.2) 70%, transparent 100%);
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(56, 189, 248, 0.8);
-    animation: floatParticle linear infinite;
-}
-
-@keyframes floatParticle {
-    0% { transform: translateY(0) translateX(0); opacity: 0; }
-    10% { opacity: 0.8; }
-    90% { opacity: 0.8; }
-    100% { transform: translateY(-100vh) translateX(50px); opacity: 0; }
-}
-
-/* MARCA Y LOGO LLAMATIVO */
-.brand-title, .hero-brand {
-    font-weight: 900;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #ffffff;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-}
-
-.brand-title { font-size: 1.6rem; }
-
-.brand-title .highlight, .hero-brand span {
-    background: linear-gradient(135deg, #00f2fe 0%, #4facfe 50%, #00c6ff 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 0 12px rgba(79, 172, 254, 0.8));
-}
-
-.hero-brand { font-size: 3.5rem; margin-bottom: 10px; line-height: 1.1; }
-
-/* CABECERA */
-.header {
-    background-color: rgba(12, 16, 26, 0.95);
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 8%;
-    border-bottom: 1px solid #1e293b;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.nav { display: flex; align-items: center; gap: 25px; }
-.nav a { text-decoration: none; color: #94a3b8; font-weight: 600; transition: color 0.3s; }
-.nav a:hover { color: #00f2fe; }
-
-/* BOTÓN WHATSAPP */
-.btn-whatsapp {
-    background: linear-gradient(135deg, #25d366, #128c7e);
-    color: white !important;
-    padding: 12px 24px;
-    border-radius: 30px;
-    font-weight: 700;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease, filter 0.25s ease;
-}
-.btn-whatsapp:hover { transform: translateY(-3px) scale(1.04); box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6); filter: brightness(1.1); }
-.btn-whatsapp:active { transform: translateY(-1px) scale(0.98); }
-
-/* HERO SECTION */
-.hero {
-    background: radial-gradient(circle at center, rgba(15, 23, 42, 0.8) 0%, rgba(8, 10, 15, 1) 100%),
-                url('https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?q=80&w=1920&auto=format&fit=crop') no-repeat center center/cover;
-    padding: 110px 8% 90px;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-}
-
-.hero-content h2 { font-size: 1.8rem; color: #e2e8f0; max-width: 800px; margin: 0 auto 15px; font-weight: 700; }
-.hero-content p { font-size: 1.1rem; color: #94a3b8; max-width: 600px; margin: 0 auto 30px; }
-
-.btn-primary {
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
-    color: #ffffff;
-    padding: 14px 35px;
-    border-radius: 30px;
-    font-weight: 800;
-    text-decoration: none;
-    display: inline-block;
-    box-shadow: 0 4px 20px rgba(0, 198, 255, 0.4);
-    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease, filter 0.25s ease;
-}
-.btn-primary:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 10px 30px rgba(0, 198, 255, 0.7); filter: brightness(1.1); }
-.btn-primary:active { transform: translateY(-1px) scale(0.98); }
-
-/* PRODUCTOS */
-.products { padding: 80px 8%; position: relative; z-index: 1; }
-.section-title { text-align: center; font-size: 2.2rem; font-weight: 800; margin-bottom: 50px; color: #ffffff; }
-.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; }
-
-.card {
-    background-color: #111625;
-    border-radius: 16px;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: 2px solid transparent;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-.card:hover { transform: translateY(-8px); }
-
-.card-header { padding: 25px 20px; text-align: center; display: flex; align-items: center; justify-content: center; height: 110px; }
-.brand-img { max-width: 150px; max-height: 55px; width: auto; height: auto; object-fit: contain; }
-.crunchy-img { max-width: 170px; max-height: 50px; }
-
-.card-body { padding: 25px; display: flex; flex-direction: column; flex-grow: 1; }
-.price { font-size: 2.2rem; font-weight: 800; color: #ffffff; text-align: center; margin-bottom: 20px; }
-.price span { font-size: 0.9rem; color: #94a3b8; font-weight: normal; }
-
-.card-body ul { list-style: none; margin-bottom: 25px; flex-grow: 1; }
-.card-body ul li { font-size: 0.9rem; color: #cbd5e1; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
-.card-body ul li i { color: #22c55e; }
-
-.btn-buy {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 48px;
-    color: white;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 0.95rem;
-    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease, filter 0.25s ease;
-    cursor: pointer;
-    margin-top: auto;
-}
-.btn-buy:hover { transform: translateY(-4px) scale(1.05); filter: brightness(1.15); }
-.btn-buy:active { transform: translateY(-1px) scale(0.98); }
-
-/* ESTILOS ESPECÍFICOS DE TARJETAS */
-.netflix-card { border-color: rgba(229, 9, 20, 0.3); }
-.netflix-card:hover { box-shadow: 0 10px 30px rgba(229, 9, 20, 0.35); border-color: #e50914; }
-.netflix-card .card-header { background: linear-gradient(180deg, rgba(229, 9, 20, 0.2) 0%, rgba(17, 22, 37, 1) 100%); }
-.netflix-card .btn-buy { background-color: #e50914; box-shadow: 0 4px 15px rgba(229, 9, 20, 0.3); }
-.netflix-card .btn-buy:hover { box-shadow: 0 8px 25px rgba(229, 9, 20, 0.7); }
-
-.disney-card { border-color: rgba(17, 60, 207, 0.3); }
-.disney-card:hover { box-shadow: 0 10px 30px rgba(30, 144, 255, 0.35); border-color: #1e90ff; }
-.disney-card .card-header { background: linear-gradient(180deg, rgba(17, 60, 207, 0.25) 0%, rgba(17, 22, 37, 1) 100%); }
-.disney-card .btn-buy { background-color: #113ccf; box-shadow: 0 4px 15px rgba(17, 60, 207, 0.3); }
-.disney-card .btn-buy:hover { box-shadow: 0 8px 25px rgba(30, 144, 255, 0.7); }
-
-.amazon-card { border-color: rgba(0, 168, 225, 0.3); }
-.amazon-card:hover { box-shadow: 0 10px 30px rgba(0, 168, 225, 0.35); border-color: #00a8e1; }
-.amazon-card .card-header { background: linear-gradient(180deg, rgba(0, 168, 225, 0.2) 0%, rgba(17, 22, 37, 1) 100%); }
-.amazon-card .btn-buy { background-color: #00a8e1; color: #000000; font-weight: 800; box-shadow: 0 4px 15px rgba(0, 168, 225, 0.3); }
-.amazon-card .btn-buy:hover { box-shadow: 0 8px 25px rgba(0, 168, 225, 0.7); color: #000000; }
-
-.crunchyroll-card { border-color: rgba(255, 103, 0, 0.3); }
-.crunchyroll-card:hover { box-shadow: 0 10px 30px rgba(255, 103, 0, 0.35); border-color: #ff6700; }
-.crunchyroll-card .card-header { background: linear-gradient(180deg, rgba(255, 103, 0, 0.2) 0%, rgba(17, 22, 37, 1) 100%); }
-.crunchyroll-card .btn-buy { background-color: #ff6700; box-shadow: 0 4px 15px rgba(255, 103, 0, 0.3); }
-.crunchyroll-card .btn-buy:hover { box-shadow: 0 8px 25px rgba(255, 103, 0, 0.7); }
-
-/* YAPE BADGE */
-.payment-methods { display: flex; justify-content: center; margin-top: 15px; }
-.badge { font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
-.yape { background-color: #742284; color: #ffffff; box-shadow: 0 2px 8px rgba(116, 34, 132, 0.4); }
-
-/* BENEFICIOS Y FOOTER */
-.benefits { background-color: #0f1420; padding: 80px 8%; border-top: 1px solid #1e293b; position: relative; z-index: 1; }
-.benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
-.benefit-item { text-align: center; padding: 25px; background-color: #161c2e; border-radius: 12px; border: 1px solid #1e293b; }
-.benefit-item i { font-size: 2.5rem; color: #00f2fe; margin-bottom: 15px; }
-.benefit-item h3 { font-size: 1.2rem; margin-bottom: 10px; color: #ffffff; }
-.benefit-item p { color: #94a3b8; font-size: 0.9rem; }
-
-.footer { text-align: center; padding: 30px; background-color: #05070a; color: #64748b; font-size: 0.9rem; border-top: 1px solid #1e293b; position: relative; z-index: 1; }
-/* --- ESTILOS RESPONSIVE PARA CELULARES --- */
-@media (max-width: 768px) {
-  body {
-    padding: 10px;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-    text-align: center;
-  }
-
-  nav {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
-
-  .tarjeta, .card, .servicio-box, .platform-card {
-    width: 100% !important;
-    margin-bottom: 15px;
-  }
-
-  button, .btn-comprar, .btn {
-    width: 100%;
-    padding: 12px;
-  }
-}
-/* --- ACOMODAR BOTÓN WHATSAPP A LA IZQUIERDA Y OCULTAR LOGO PEQUEÑO --- */
-.navbar .logo, header .logo, .nav-brand {
-  display: none !important; /* Oculta el texto chiquito duplicado */
-}
-
-.navbar, header nav {
-  justify-content: flex-start !important; /* Mueve el contenido a la izquierda */
-  padding: 10px 15px !important;
-}
-
-/* Botón de Contacto en la esquina superior izquierda */
-.btn-whatsapp, nav a[href*="wa.me"] {
-  margin-right: auto !important;
-  font-size: 0.85rem !important;
-  padding: 8px 14px !important;
-}
-/* --- CABECERA Y NAVEGACIÓN MÓVIL PERFECCIONADA --- */
-.navbar-mobile {
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  padding: 12px 20px !important;
-  position: relative;
-  z-index: 1000;
-  width: 100%;
-}
-
-/* Botón Contacto a la izquierda */
-.btn-contacto-top {
-  background: #25d366 !important;
-  color: #ffffff !important;
-  padding: 8px 16px !important;
-  border-radius: 25px !important;
-  font-weight: 600 !important;
-  font-size: 0.85rem !important;
-  text-decoration: none !important;
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
-}
-
-/* Botón de 3 Rayas a la derecha */
-.menu-hamburguesa {
-  font-size: 1.6rem;
+  background-color: #080a0f;
   color: #ffffff;
-  cursor: pointer;
-  padding: 5px 10px;
 }
 
-/* Opciones Ocultas por defecto */
-.nav-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 20px;
-  background: #0f172a;
-  border: 1px solid rgba(0, 242, 254, 0.3);
-  border-radius: 12px;
-  padding: 15px;
-  flex-direction: column;
-  gap: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
-}
-
-.nav-menu.active {
-  display: flex !important; /* Muestra las opciones al presionar las 3 rayas */
-}
-
-.nav-menu a {
-  color: #ffffff !important;
-  text-decoration: none !important;
-  font-weight: 600;
-  font-size: 0.95rem;
-}
-
-/* --- TÍTULO PRINCIPAL CENTRADO Y SIN DESBORDAR EN CELULAR --- */
-.hero-content h2, .hero h1, h1 {
-  font-size: clamp(1.8rem, 7vw, 2.8rem) !important; /* Ajuste fluido para pantallas pequeñas */
-  text-align: center !important;
-  word-break: break-word !important; /* Evita que el texto sobrepase la pantalla */
-  max-width: 95% !important;
-  margin: 15px auto !important;
-}
-/* --- ESTILO PARA EL TEXTO "DM" AL COSTADO DE CONTACTO --- */
-.texto-dm {
-  margin-left: 6px;
-  font-weight: 800;
-  font-size: 0.95rem;
-  color: #ffffff; /* La 'D' sale de color blanco */
-  letter-spacing: 1px;
-}
-
-.letra-m {
-  color: #00f2fe; /* La 'M' sale con el color neón celeste igual a STREAM */
-  text-shadow: 0 0 8px rgba(0, 242, 254, 0.6);
-}
-/* --- CONTENEDOR IZQUIERDO Y LOGO DM --- */
-.brand-left {
-  display: flex;
-  align-items: center;
-  gap: 12px; /* Espacio entre el logo DM y el botón verde */
-}
-
-/* Logo de Iniciales DM */
-.logo-dm {
-  font-size: 1.5rem; /* Tamaño más vistoso para el logo */
-  font-weight: 900;
-  text-decoration: none;
-  color: #ffffff; /* Letra D en blanco */
-  letter-spacing: 1px;
-  line-height: 1;
-  padding: 4px 8px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.05); /* Suave fondo transparente */
-  border: 1px solid rgba(0, 242, 254, 0.2);
-  transition: all 0.3s ease;
-}
-
-.logo-dm span {
-  color: #00f2fe; /* Letra M en celeste neón */
-  text-shadow: 0 0 10px #00f2fe, 0 0 20px #00f2fe;
-}
-
-.logo-dm:hover {
-  transform: scale(1.08);
-  border-color: #00f2fe;
-}
-/* --- CORRECCIÓN DE ALINEACIÓN PARA CUALQUIER PANTALLA --- */
+/* --- CABECERA MÓVIL Y LOGO DM --- */
 .navbar-mobile {
   display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
   padding: 15px 25px !important;
   width: 100% !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(8, 10, 15, 0.9);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .brand-left {
@@ -377,12 +34,11 @@ body {
   gap: 15px !important;
 }
 
-/* Forzar colores e independizar el Logo DM */
 .logo-dm {
   font-size: 1.6rem !important;
   font-weight: 900 !important;
   text-decoration: none !important;
-  color: #ffffff !important; /* D blanca en laptop y celular */
+  color: #ffffff !important;
   letter-spacing: 1px !important;
   padding: 6px 12px !important;
   border-radius: 8px !important;
@@ -394,143 +50,157 @@ body {
 }
 
 .logo-dm span {
-  color: #00f2fe !important; /* M celeste neón */
+  color: #00f2fe !important;
   text-shadow: 0 0 10px #00f2fe, 0 0 20px #00f2fe !important;
 }
-/* --- SECCIÓN NOSOTROS --- */
-.nosotros-section {
-  padding: 60px 20px;
-  background: rgba(15, 23, 42, 0.6);
+
+.btn-contacto-top {
+  background: #25d366;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.btn-contacto-top:hover {
+  transform: scale(1.05);
+}
+
+.menu-hamburguesa {
+  font-size: 1.5rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* Menú Desplegable */
+.nav-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(8, 10, 15, 0.95);
+  backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 25px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: clip-path 0.4s ease-in-out;
+}
+
+.nav-menu.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.nav-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #00f2fe;
+}
+
+/* --- SECCIÓN HERO --- */
+.hero {
   position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  margin-top: 60px;
+}
+
+.particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 1;
 }
 
-.nosotros-container {
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.hero-content h1 span {
+  color: #00f2fe;
+  text-shadow: 0 0 20px rgba(0, 242, 254, 0.6);
+}
+
+.hero-subtitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  color: #e2e8f0;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.hero-desc {
+  color: #94a3b8;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.btn-main {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #ffffff;
+  padding: 14px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 5px 20px rgba(0, 114, 255, 0.4);
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.btn-main:hover {
+  transform: scale(1.05);
+}
+
+/* --- SECCIÓN PRODUCTOS / PLANES --- */
+.products-section {
+  padding: 80px 20px;
   max-width: 1100px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 40px;
-  align-items: center;
 }
 
-.badge-nosotros {
-  background: rgba(0, 242, 254, 0.1);
-  color: #00f2fe;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  border: 1px solid rgba(0, 242, 254, 0.3);
-  display: inline-block;
-  margin-bottom: 12px;
-}
-
-.nosotros-content h2 {
-  font-size: 2.2rem;
+.section-title {
+  text-align: center;
+  font-size: 2rem;
   font-weight: 800;
   color: #ffffff;
-  margin-bottom: 15px;
-  line-height: 1.2;
+  margin-bottom: 40px;
 }
 
-.nosotros-content p {
-  color: #94a3b8;
-  font-size: 1rem;
-  margin-bottom: 15px;
-  line-height: 1.6;
-}
-
-.nosotros-puntos {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 25px;
-}
-
-.punto-item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  background: rgba(255, 255, 255, 0.03);
-  padding: 12px 18px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.punto-item i {
-  font-size: 1.5rem;
-  color: #00f2fe;
-  width: 30px;
-  text-align: center;
-}
-
-.punto-item h4 {
-  color: #ffffff;
-  font-size: 1rem;
-  margin-bottom: 2px;
-}
-
-.punto-item p {
-  color: #64748b;
-  font-size: 0.85rem;
-  margin: 0;
-}
-
-/* Tarjeta con Estadísticas */
-.nosotros-card-stats {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px;
-  background: linear-gradient(145deg, #0f172a, #1e293b);
-  padding: 25px;
-  border-radius: 20px;
-  border: 1px solid rgba(0, 242, 254, 0.2);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-.stat-box {
-  text-align: center;
-  padding: 15px;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.03);
-}
-
-.stat-box i {
-  font-size: 1.8rem;
-  color: #00f2fe;
-  margin-bottom: 8px;
-}
-
-.stat-box h3 {
-  font-size: 1.8rem;
-  color: #ffffff;
-  font-weight: 800;
-}
-
-.stat-box p {
-  color: #94a3b8;
-  font-size: 0.85rem;
-  margin: 0;
-}
-
-/* Adaptación para Celulares */
-@media (max-width: 768px) {
-  .nosotros-container {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-    /* --- CORRECCIÓN DE TARJETAS DE PRODUCTOS (GRILLA) --- */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 25px;
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
-  position: relative;
-  z-index: 2;
 }
 
 .card-product {
@@ -539,9 +209,7 @@ body {
   border-radius: 16px;
   padding: 25px;
   text-align: left;
-  position: relative;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-  cursor: pointer;
   transition: transform 0.3s ease, border-color 0.3s ease;
   backdrop-filter: blur(10px);
 }
@@ -620,56 +288,180 @@ body {
   opacity: 0.9;
 }
 
-/* --- ESTILOS DE FONDOS DINÁMICOS Y TEXTO DE FONDO --- */
-.hero {
-  position: relative;
-  transition: background 0.6s ease, box-shadow 0.6s ease;
-  overflow: hidden;
+/* --- SECCIÓN NOSOTROS --- */
+.nosotros-section {
+  padding: 60px 20px;
+  background: rgba(15, 23, 42, 0.6);
 }
 
-.hero::before {
-  content: var(--bg-text, "DUQUESTREAM");
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: clamp(4rem, 15vw, 12rem);
-  font-weight: 900;
-  color: var(--bg-text-color, rgba(255, 255, 255, 0.03));
-  pointer-events: none;
-  white-space: nowrap;
-  transition: all 0.5s ease;
-  z-index: 0;
-  letter-spacing: 5px;
+.nosotros-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
 }
 
-/* TEMA NETFLIX (Rojo) */
-.hero.theme-netflix {
-  --bg-text: "NETFLIX";
-  --bg-text-color: rgba(229, 9, 20, 0.12);
-  background: radial-gradient(circle at center, rgba(229, 9, 20, 0.25) 0%, rgba(8, 10, 15, 0.95) 80%) !important;
+.badge-nosotros {
+  background: rgba(0, 242, 254, 0.1);
+  color: #00f2fe;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  display: inline-block;
+  margin-bottom: 12px;
 }
 
-/* TEMA DISNEY (Azul Mágico) */
-.hero.theme-disney {
-  --bg-text: "DISNEY+";
-  --bg-text-color: rgba(17, 60, 207, 0.15);
-  background: radial-gradient(circle at center, rgba(17, 138, 239, 0.25) 0%, rgba(8, 10, 15, 0.95) 80%) !important;
+.nosotros-content h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 15px;
+  line-height: 1.2;
 }
 
-/* TEMA AMAZON (Celeste / Prime) */
-.hero.theme-amazon {
-  --bg-text: "PRIME VIDEO";
-  --bg-text-color: rgba(0, 168, 225, 0.15);
-  background: radial-gradient(circle at center, rgba(0, 168, 225, 0.25) 0%, rgba(8, 10, 15, 0.95) 80%) !important;
+.nosotros-content p {
+  color: #94a3b8;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
 }
 
-/* TEMA CRUNCHYROLL (Naranja) */
-.hero.theme-crunchyroll {
-  --bg-text: "CRUNCHYROLL";
-  --bg-text-color: rgba(244, 117, 33, 0.15);
-  background: radial-gradient(circle at center, rgba(244, 117, 33, 0.25) 0%, rgba(8, 10, 15, 0.95) 80%) !important;
+.nosotros-puntos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 25px;
 }
+
+.punto-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.punto-item i {
+  font-size: 1.5rem;
+  color: #00f2fe;
+  width: 30px;
+  text-align: center;
+}
+
+.punto-item h4 {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
+.punto-item p {
+  color: #64748b;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.nosotros-card-stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  background: linear-gradient(145deg, #0f172a, #1e293b);
+  padding: 25px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.stat-box {
+  text-align: center;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.stat-box i {
+  font-size: 1.8rem;
+  color: #00f2fe;
+  margin-bottom: 8px;
+}
+
+.stat-box h3 {
+  font-size: 1.8rem;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.stat-box p {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* --- SECCIÓN BENEFICIOS --- */
+.benefits {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.benefit-item {
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-item i {
+  font-size: 2.5rem;
+  color: #00f2fe;
+  margin-bottom: 15px;
+}
+
+.benefit-item h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.benefit-item p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+/* --- PIE DE PÁGINA --- */
+.footer {
+  text-align: center;
+  padding: 30px;
+  background: #05070a;
+  color: #64748b;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* --- ADAPTACIÓN RESPONSIVE PARA MÓVILES --- */
+@media (max-width: 768px) {
+  .nosotros-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 
   .nosotros-content h2 {
     font-size: 1.7rem;
@@ -696,66 +488,4 @@ body {
   .stat-box p {
     font-size: 0.7rem;
   }
-}
-/* --- ESTILOS DE FONDOS DINÁMICOS Y TEXTO DE FONDO --- */
-.hero {
-  position: relative;
-  transition: background 0.6s ease, box-shadow 0.6s ease;
-  overflow: hidden;
-}
-
-/* Marca de agua / Nombre de fondo gigante */
-.hero::before {
-  content: var(--bg-text, "DUQUESTREAM");
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: clamp(4rem, 15vw, 12rem);
-  font-weight: 900;
-  color: var(--bg-text-color, rgba(255, 255, 255, 0.03));
-  pointer-events: none;
-  white-space: nowrap;
-  transition: all 0.5s ease;
-  z-index: 0;
-  letter-spacing: 5px;
-}
-
-/* TEMA NETFLIX (Rojo) */
-.hero.theme-netflix {
-  --bg-text: "NETFLIX";
-  --bg-text-color: rgba(229, 9, 20, 0.12);
-  background: radial-gradient(circle at center, rgba(229, 9, 20, 0.25) 0%, rgba(8, 10, 15, 0.95) 80%) !important;
-}
-
-/* TEMA DISNEY (Azul Mágico) */
-.hero.theme-disney {
-  --bg-text: "DISNEY+";
-  --bg-text-color: rgba(17, 60, 207, 0.15);
-  background: radial-gradient(circle at center, rgba(17, 138, 239, 0.25) 0%, rgba(8, 10, 15, 0.95) 80%) !important;
-}
-
-/* TEMA AMAZON (Celeste / Prime) */
-.hero.theme-amazon {
-  --bg-text: "PRIME VIDEO";
-  --bg-text-color: rgba(0, 168, 225, 0.15);
-  background: radial-gradient(circle at center, rgba(0, 168, 225, 0.25) 0%, rgba(8, 10, 15, 0.95) 80%) !important;
-}
-
-/* TEMA CRUNCHYROLL (Naranja) */
-.hero.theme-crunchyroll {
-  --bg-text: "CRUNCHYROLL";
-  --bg-text-color: rgba(244, 117, 33, 0.15);
-  background: radial-gradient(circle at center, rgba(244, 117, 33, 0.25) 0%, rgba(8, 10, 15, 0.95) 80%) !important;
-}
-
-/* Efecto al seleccionar tarjetas */
-.card-product {
-  cursor: pointer;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.card-product:hover {
-  transform: translateY(-5px);
-  border-color: #00f2fe;
 }
