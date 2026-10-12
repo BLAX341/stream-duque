@@ -209,3 +209,31 @@ body {
 .benefit-item p { color: #94a3b8; font-size: 0.9rem; }
 
 .footer { text-align: center; padding: 30px; background-color: #05070a; color: #64748b; font-size: 0.9rem; border-top: 1px solid #1e293b; position: relative; z-index: 1; }
+/* --- ESTILOS RESPONSIVE PARA CELULARES --- */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .tarjeta, .card, .servicio-box, .platform-card {
+    width: 100% !important;
+    margin-bottom: 15px;
+  }
+
+  button, .btn-comprar, .btn {
+    width: 100%;
+    padding: 12px;
+  }
+}
