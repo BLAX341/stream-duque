@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DUQUE STREAM - Cuentas y Perfiles Originales | Perú</title>
-    <!-- Enlace al CSS dentro de la carpeta css -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Iconos FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DUQUE STREAM - Cuentas y Perfiles</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Tu archivo CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!-- CABECERA MÓVIL OPTIMIZADA -->
+
+  <!-- CABECERA MÓVIL OPTIMIZADA -->
   <header class="navbar-mobile">
-    <!-- Botón Contacto Arriba a la Izquierda -->
     <!-- Contenedor del lado izquierdo (Logo DM + Botón Contacto) -->
     <div class="brand-left">
       <!-- Logo de Iniciales DM de tu Web -->
@@ -34,73 +34,80 @@
     <!-- Menú Desplegable -->
     <nav class="nav-menu" id="navMenu">
       <a href="#inicio" onclick="toggleMenu()">Inicio</a>
+      <a href="#nosotros" onclick="toggleMenu()">Nosotros</a>
       <a href="#productos" onclick="toggleMenu()">Planes</a>
       <a href="#beneficios" onclick="toggleMenu()">Garantía</a>
     </nav>
   </header>
 
-    <!-- SECCIÓN PRINCIPAL (HERO) -->
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-brand">DUQUE<span>STREAM</span></h1>
-            <h2>Tus plataformas favoritas al mejor precio en Perú</h2>
-            <p>Perfiles y cuentas 100% estables, garantía total y activación inmediata por WhatsApp.</p>
-            <a href="#productos" class="btn-primary">Ver Catálogo y Precios</a>
-        </div>
-    </section>
+  <!-- SECCIÓN HERO / INICIO -->
+  <section class="hero" id="inicio">
+    <div id="particles-js" class="particles-container"></div>
+    <div class="hero-content">
+      <h1>DUQUE<span>STREAM</span></h1>
+      <p class="hero-subtitle">Tus plataformas favoritas al mejor precio en Perú</p>
+      <p class="hero-desc">Perfiles y cuentas 100% estables, garantía total y activación inmediata por WhatsApp.</p>
+      <a href="#productos" class="btn-main">Ver Catálogo y Precios</a>
+    </div>
+  </section>
 
-    <!-- CATÁLOGO DE PRODUCTOS -->
-   <!-- NETFLIX -->
-  <div class="card-product" onclick="cambiarTema('netflix')">
-    <div class="badge">Más Vendido</div>
-    <h3>Netflix Premium</h3>
-    <p class="price">S/ 10.00 <span>/ mes</span></p>
-    <ul>
-      <li><i class="fas fa-check"></i> Perfil Privado con PIN</li>
-      <li><i class="fas fa-check"></i> Calidad Ultra HD 4K</li>
-    </ul>
-    <a href="https://wa.me/51990516065?text=Hola,%20deseo%20comprar%20Netflix" class="btn-card" target="_blank">Comprar</a>
-  </div>
+  <!-- SECCIÓN PRODUCTOS / PLANES -->
+  <section class="products-section" id="productos">
+    <h2 class="section-title">Nuestros Planes Disponibles</h2>
+    <div class="products-grid">
 
-  <!-- DISNEY+ -->
-  <div class="card-product" onclick="cambiarTema('disney')">
-    <div class="badge">Popular</div>
-    <h3>Disney+ Premium</h3>
-    <p class="price">S/ 8.00 <span>/ mes</span></p>
-    <ul>
-      <li><i class="fas fa-check"></i> Perfil Personalizado</li>
-      <li><i class="fas fa-check"></i> Contenido Completo Star+</li>
-    </ul>
-    <a href="https://wa.me/51990516065?text=Hola,%20deseo%20comprar%20Disney" class="btn-card" target="_blank">Comprar</a>
-  </div>
+      <!-- NETFLIX -->
+      <div class="card-product">
+        <div class="badge">Más Vendido</div>
+        <h3>Netflix Premium</h3>
+        <p class="price">S/ 10.00 <span>/ mes</span></p>
+        <ul>
+          <li><i class="fas fa-check"></i> Perfil Privado con PIN</li>
+          <li><i class="fas fa-check"></i> Calidad Ultra HD 4K</li>
+        </ul>
+        <a href="https://wa.me/51990516065?text=Hola,%20deseo%20comprar%20Netflix" class="btn-card" target="_blank">Comprar</a>
+      </div>
 
-  <!-- AMAZON PRIME -->
-  <div class="card-product" onclick="cambiarTema('amazon')">
-    <h3>Prime Video</h3>
-    <p class="price">S/ 7.00 <span>/ mes</span></p>
-    <ul>
-      <li><i class="fas fa-check"></i> Perfil Privado</li>
-      <li><i class="fas fa-check"></i> Calidad Full HD</li>
-    </ul>
-    <a href="https://wa.me/51990516065?text=Hola,%20deseo%20comprar%20Amazon" class="btn-card" target="_blank">Comprar</a>
-  </div>
+      <!-- DISNEY+ -->
+      <div class="card-product">
+        <div class="badge">Popular</div>
+        <h3>Disney+ Premium</h3>
+        <p class="price">S/ 8.00 <span>/ mes</span></p>
+        <ul>
+          <li><i class="fas fa-check"></i> Perfil Personalizado</li>
+          <li><i class="fas fa-check"></i> Contenido Completo Star+</li>
+        </ul>
+        <a href="https://wa.me/51990516065?text=Hola,%20deseo%20comprar%20Disney" class="btn-card" target="_blank">Comprar</a>
+      </div>
 
-  <!-- CRUNCHYROLL -->
-  <div class="card-product" onclick="cambiarTema('crunchyroll')">
-    <h3>Crunchyroll Fan</h3>
-    <p class="price">S/ 5.00 <span>/ mes</span></p>
-    <ul>
-      <li><i class="fas fa-check"></i> Sin Anuncios</li>
-      <li><i class="fas fa-check"></i> Estrenos de Japón</li>
-    </ul>
-    <a href="https://wa.me/51990516065?text=Hola,%20deseo%20comprar%20Crunchyroll" class="btn-card" target="_blank">Comprar</a>
-  </div>
-    </section>
-    <!-- SECCIÓN NOSOTROS -->
+      <!-- AMAZON PRIME -->
+      <div class="card-product">
+        <h3>Prime Video</h3>
+        <p class="price">S/ 7.00 <span>/ mes</span></p>
+        <ul>
+          <li><i class="fas fa-check"></i> Perfil Privado</li>
+          <li><i class="fas fa-check"></i> Calidad Full HD</li>
+        </ul>
+        <a href="https://wa.me/51990516065?text=Hola,%20deseo%20comprar%20Amazon" class="btn-card" target="_blank">Comprar</a>
+      </div>
+
+      <!-- CRUNCHYROLL -->
+      <div class="card-product">
+        <h3>Crunchyroll Fan</h3>
+        <p class="price">S/ 5.00 <span>/ mes</span></p>
+        <ul>
+          <li><i class="fas fa-check"></i> Sin Anuncios</li>
+          <li><i class="fas fa-check"></i> Estrenos de Japón</li>
+        </ul>
+        <a href="https://wa.me/51990516065?text=Hola,%20deseo%20comprar%20Crunchyroll" class="btn-card" target="_blank">Comprar</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN NOSOTROS -->
   <section class="nosotros-section" id="nosotros">
     <div class="nosotros-container">
-      
-      <!-- Lado Izquierdo: Información -->
       <div class="nosotros-content">
         <span class="badge-nosotros">¿Quiénes Somos?</span>
         <h2>Tu entretenimiento en las mejores manos</h2>
@@ -111,13 +118,12 @@
           Nos diferenciamos por ofrecer perfiles estables, renovaciones directas sin perder tu historial y una atención rápida mediante soporte personalizado vía WhatsApp.
         </p>
 
-        <!-- Puntos Fuertes -->
         <div class="nosotros-puntos">
           <div class="punto-item">
             <i class="fas fa-bolt"></i>
             <div>
               <h4>Entrega Inmediata</h4>
-              <p>Activación rápida tras confirmar tu pago por Yape.</p>
+              <p>Activación rápida tras confirmar tu pago.</p>
             </div>
           </div>
 
@@ -131,7 +137,6 @@
         </div>
       </div>
 
-      <!-- Lado Derecho: Estadísticas -->
       <div class="nosotros-card-stats">
         <div class="stat-box">
           <i class="fas fa-users"></i>
@@ -149,70 +154,43 @@
           <p>Soporte por WhatsApp</p>
         </div>
       </div>
-
     </div>
   </section>
 
-    <!-- BENEFICIOS -->
-    <section id="beneficios" class="benefits">
-        <h2 class="section-title">¿Por qué comprar en DUQUE STREAM?</h2>
-        <div class="benefits-grid">
-            <div class="benefit-item">
-                <i class="fa-solid fa-bolt"></i>
-                <h3>Entrega Inmediata</h3>
-                <p>Recibes los datos de tu cuenta por WhatsApp minutos después de tu pago por Yape.</p>
-            </div>
-            <div class="benefit-item">
-                <i class="fa-solid fa-shield-halved"></i>
-                <h3>Garantía el Mes Completo</h3>
-                <p>Soporte técnico directo ante cualquier consulta durante los 30 días de tu servicio.</p>
-            </div>
-            <div class="benefit-item">
-                <i class="fa-solid fa-mobile-screen-button"></i>
-                <h3>Pagos Rápidos</h3>
-                <p>Pagos sencillos y seguros directamente a través de Yape.</p>
-            </div>
-        </div>
-    </section>
+  <!-- SECCIÓN BENEFICIOS -->
+  <section id="beneficios" class="benefits">
+    <h2 class="section-title">¿Por qué comprar en DUQUE STREAM?</h2>
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <i class="fa-solid fa-bolt"></i>
+        <h3>Entrega Inmediata</h3>
+        <p>Recibes los datos de tu cuenta por WhatsApp minutos después de tu pago.</p>
+      </div>
+      <div class="benefit-item">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h3>Garantía el Mes Completo</h3>
+        <p>Soporte técnico directo ante cualquier consulta durante los 30 días de tu servicio.</p>
+      </div>
+      <div class="benefit-item">
+        <i class="fa-solid fa-mobile-screen-button"></i>
+        <h3>Pagos Rápidos</h3>
+        <p>Pagos sencillos y seguros directamente a través de Yape.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- PIE DE PÁGINA -->
-    <footer class="footer">
-        <p>&copy; 2026 DUQUE STREAM. Todos los derechos reservados.</p>
-    </footer>
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer">
+    <p>&copy; 2026 DUQUE STREAM. Todos los derechos reservados.</p>
+  </footer>
 
-    <!-- Script de partículas dentro de la carpeta js -->
-    <script src="js/particles.js"></script>
-   <script>
-  function toggleMenu() {
-    const menu = document.getElementById('navMenu');
-    menu.classList.toggle('active');
-  }
-
-  const coloresTemas = {
-    netflix: '#e50914',
-    disney: '#118aef',
-    amazon: '#00a8e1',
-    crunchyroll: '#f47521'
-  };
-
-  function cambiarTema(plataforma) {
-    const heroSection = document.querySelector('.hero');
-    heroSection.classList.remove('theme-netflix', 'theme-disney', 'theme-amazon', 'theme-crunchyroll');
-    
-    if (plataforma) {
-      heroSection.classList.add(`theme-${plataforma}`);
+  <!-- Script de partículas -->
+  <script src="js/particles.js"></script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('active');
     }
-
-    if (window.pJSDom && window.pJSDom[0] && coloresTemas[plataforma]) {
-      const colorHex = coloresTemas[plataforma];
-      const pJS = window.pJSDom[0].pJS;
-      pJS.particles.color.value = colorHex;
-      pJS.particles.line_linked.color = colorHex;
-      pJS.fn.particlesRefresh();
-    }
-
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-</script>
+  </script>
 </body>
 </html>
