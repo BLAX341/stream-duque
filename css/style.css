@@ -842,3 +842,33 @@ body {
     max-width: 100%;
   }
 }
+/* --- ESTILO INTERACTIVO PARA BOTÓN YAPE --- */
+
+.payment-methods {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.badge-yape {
+  background: #712484 !important;
+  color: #ffffff !important;
+  font-size: 0.8rem !important;
+  font-weight: 800 !important;
+  padding: 6px 16px !important;
+  border-radius: 14px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Efecto al pasar el cursor o tocar */
+.badge-yape:hover,
+.badge-yape:active {
+  transform: translateY(-2px) scale(1.04) !important;
+  background: #8e2ea5 !important;
+  box-shadow: 0 0 15px rgba(113, 36, 132, 0.8), 0 0 25px rgba(113, 36, 132, 0.5) !important;
+}
