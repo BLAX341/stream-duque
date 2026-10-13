@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
 }
@@ -186,6 +186,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 25px;
+  align-items: stretch;
 }
 
 .card-product {
@@ -196,6 +197,10 @@ body {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
   position: relative;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  height: 100% !important;
 }
 
 .card-header {
@@ -212,21 +217,30 @@ body {
   object-fit: contain;
 }
 
-/* ILUMINACIÓN Y VISIBILIDAD DE LOGOS DE DISNEY Y PRIME */
 .logo-bright {
   filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(0, 242, 254, 0.8)) !important;
 }
 
-.crunchy-logo-svg {
-  width: 45px;
-  height: 45px;
+.title-crunchyroll {
+  color: #f47521 !important;
+  font-size: 1.6rem !important;
+  font-weight: 800 !important;
+  text-shadow: 0 0 12px rgba(244, 117, 33, 0.4) !important;
+  margin: 0 !important;
 }
 
-/* BORDES COLORIDOS */
+/* BORDES COLORIDOS DE PLATAFORMAS */
 .netflix-card { border: 1px solid rgba(229, 9, 20, 0.5) !important; }
 .disney-card { border: 1px solid rgba(17, 60, 207, 0.5) !important; }
 .amazon-card { border: 1px solid rgba(0, 168, 225, 0.5) !important; }
 .crunchy-card { border: 1px solid rgba(244, 117, 33, 0.5) !important; }
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
 
 .price {
   font-size: 1.6rem;
@@ -241,10 +255,15 @@ body {
   font-weight: 400;
 }
 
-.card-product ul {
+.card-body ul {
   list-style: none;
   padding: 0;
   margin-bottom: 20px;
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-grow: 1;
 }
 
 .card-product ul li {
@@ -261,7 +280,7 @@ body {
   font-size: 0.85rem;
 }
 
-/* BOTONES ESPECÍFICOS DE COMPRA */
+/* BOTONES ESPECÍFICOS DE COMPRA CON INTERACTIVIDAD */
 .btn-card {
   display: block;
   width: 100%;
@@ -271,6 +290,8 @@ body {
   color: #ffffff;
   text-decoration: none;
   font-weight: 700;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease !important;
+  cursor: pointer;
 }
 
 .btn-netflix { background: #e50914 !important; }
@@ -278,572 +299,31 @@ body {
 .btn-amazon { background: #00a8e1 !important; }
 .btn-crunchy { background: #ff6600 !important; }
 
-.payment-methods {
-  text-align: center;
-  margin-top: 12px;
-}
-
-.badge-yape {
-  background: #712484;
-  color: #ffffff;
-  font-size: 0.75rem;
-  font-weight: 800;
-  padding: 4px 14px;
-  border-radius: 12px;
-  display: inline-block;
-}
-
-/* NOSOTROS Y BENEFICIOS */
-.nosotros-section, .benefits {
-  position: relative;
-  z-index: 2;
-  padding: 60px 20px;
-}
-
-.footer {
-  text-align: center;
-  padding: 25px;
-  background: #05070a;
-  color: #64748b;
-  font-size: 0.85rem;
-  position: relative;
-  z-index: 2;
-}
-/* --- ALINEACIÓN PERFECTA DE TARJETAS Y EFECTO EN BOTONES --- */
-
-/* Estructura para que todas las tarjetas midan exactamente lo mismo */
-.card-product {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: space-between !important;
-  height: 100% !important;
-}
-
-.card-body {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  justify-content: space-between;
-}
-
-.card-body ul {
-  flex-grow: 1; /* Empuja el botón y la etiqueta Yape hacia abajo para que queden alineados */
-  margin-bottom: 20px;
-}
-
-/* Transición suave para los botones al tocar o pasar el mouse */
-.btn-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease !important;
-  cursor: pointer;
-}
-
-/* EFECTO DE RESPLANDOR (HOVER / TOUCH) EN CADA BOTÓN */
-
-/* Netflix (Resplandor Rojo) */
-.btn-netflix:hover,
-.btn-netflix:active {
+.btn-netflix:hover, .btn-netflix:active {
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 0 20px rgba(229, 9, 20, 0.8), 0 0 35px rgba(229, 9, 20, 0.5) !important;
   filter: brightness(1.2);
 }
 
-/* Disney+ (Resplandor Azul) */
-.btn-disney:hover,
-.btn-disney:active {
+.btn-disney:hover, .btn-disney:active {
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 0 20px rgba(17, 60, 207, 0.8), 0 0 35px rgba(17, 60, 207, 0.5) !important;
   filter: brightness(1.2);
 }
 
-/* Prime Video (Resplandor Celeste) */
-.btn-amazon:hover,
-.btn-amazon:active {
+.btn-amazon:hover, .btn-amazon:active {
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 0 20px rgba(0, 168, 225, 0.8), 0 0 35px rgba(0, 168, 225, 0.5) !important;
   filter: brightness(1.2);
 }
 
-/* Crunchyroll (Resplandor Naranja) */
-.btn-crunchy:hover,
-.btn-crunchy:active {
+.btn-crunchy:hover, .btn-crunchy:active {
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 0 20px rgba(255, 102, 0, 0.8), 0 0 35px rgba(255, 102, 0, 0.5) !important;
   filter: brightness(1.2);
 }
-/* --- DISEÑO CENTRADO Y LLAMATIVO PARA NOSOTROS Y BENEFICIOS --- */
 
-.nosotros-section {
-  padding: 80px 20px;
-  max-width: 1100px;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-  z-index: 2;
-}
-
-.nosotros-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 35px;
-}
-
-.badge-nosotros {
-  background: rgba(0, 242, 254, 0.15);
-  color: #00f2fe;
-  padding: 6px 18px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  border: 1px solid rgba(0, 242, 254, 0.4);
-  display: inline-block;
-  margin-bottom: 15px;
-  text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
-}
-
-.nosotros-header h2 {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-  font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 15px;
-}
-
-.nosotros-desc {
-  color: #94a3b8;
-  font-size: 1rem;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-/* CAJAS DE PUNTOS CLAVE (ENTREGA Y GARANTÍA) */
-.nosotros-puntos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  width: 100%;
-  max-width: 850px;
-}
-
-.punto-card {
-  background: rgba(15, 23, 42, 0.85);
-  border: 1px solid rgba(0, 242, 254, 0.2);
-  border-radius: 16px;
-  padding: 25px 20px;
-  text-align: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(10px);
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.punto-card:hover {
-  transform: translateY(-5px);
-  border-color: #00f2fe;
-}
-
-.icon-box {
-  font-size: 2rem;
-  color: #00f2fe;
-  margin-bottom: 12px;
-  text-shadow: 0 0 12px rgba(0, 242, 254, 0.6);
-}
-
-.punto-card h4 {
-  color: #ffffff;
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.punto-card p {
-  color: #cbd5e1;
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
-/* ESTADÍSTICAS EN TARJETAS */
-.nosotros-stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  width: 100%;
-  max-width: 900px;
-}
-
-.stat-box {
-  background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.9));
-  padding: 20px;
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  text-align: center;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-.stat-box i {
-  font-size: 2rem;
-  color: #00f2fe;
-  margin-bottom: 10px;
-  text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
-}
-
-.stat-box h3 {
-  font-size: 1.8rem;
-  color: #ffffff;
-  font-weight: 800;
-}
-
-.stat-box p {
-  color: #94a3b8;
-  font-size: 0.85rem;
-}
-
-/* BENEFICIOS CENTRADOS CON LOGOS/ICONOS */
-.benefits {
-  padding: 60px 20px;
-  max-width: 1100px;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-  z-index: 2;
-}
-
-.section-title span {
-  color: #00f2fe;
-  text-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
-}
-
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
-}
-
-.benefit-item {
-  background: rgba(15, 23, 42, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 30px 20px;
-  border-radius: 16px;
-  text-align: center;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(10px);
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.benefit-item:hover {
-  transform: translateY(-5px);
-  border-color: #00f2fe;
-}
-
-.benefit-icon {
-  font-size: 2.5rem;
-  color: #00f2fe;
-  margin-bottom: 15px;
-  text-shadow: 0 0 15px rgba(0, 242, 254, 0.6);
-}
-
-.benefit-item h3 {
-  color: #ffffff;
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.benefit-item p {
-  color: #94a3b8;
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-/* --- ORGANIZACIÓN DE LAS 5 OPCIONES (3 ARRIBA, 2 ABAJO) --- */
-.nosotros-grid-5 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas arriba */
-  gap: 25px;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/* Las últimas 2 tarjetas (elementos 4 y 5) se centran abajo */
-.nosotros-grid-5 .punto-card:nth-child(4) {
-  grid-column: 1 / 2;
-  margin-left: 50%;
-}
-
-.nosotros-grid-5 .punto-card:nth-child(5) {
-  grid-column: 2 / 3;
-  margin-right: 50%;
-}
-
-/* Estilo unificado para las 5 tarjetas de la sección */
-.punto-card {
-  background: rgba(15, 23, 42, 0.85);
-  border: 1px solid rgba(0, 242, 254, 0.25);
-  border-radius: 16px;
-  padding: 25px 20px;
-  text-align: center;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(10px);
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.punto-card:hover {
-  transform: translateY(-5px);
-  border-color: #00f2fe;
-}
-
-.icon-box {
-  font-size: 2.2rem;
-  color: #00f2fe;
-  margin-bottom: 12px;
-  text-shadow: 0 0 15px rgba(0, 242, 254, 0.6);
-}
-
-.punto-card h4, 
-.punto-card h3 {
-  color: #ffffff;
-  font-size: 1.4rem;
-  font-weight: 800;
-  margin-bottom: 8px;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-}
-
-.punto-card p {
-  color: #94a3b8;
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
-/* Adaptación automática para pantallas móviles o tablets pequeñas */
-@media (max-width: 850px) {
-  .nosotros-grid-5 {
-    grid-template-columns: 1fr;
-  }
-  .nosotros-grid-5 .punto-card:nth-child(4),
-  .nosotros-grid-5 .punto-card:nth-child(5) {
-    grid-column: auto;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-/* --- CORRECCIÓN DEFINITIVA DE LA SECCIÓN NOSOTROS (3-2 CENTRADO) --- */
-
-.nosotros-section {
-  padding: 80px 20px;
-  max-width: 1100px;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-  z-index: 2;
-}
-
-.nosotros-header h2 {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-  font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 15px;
-}
-
-.nosotros-desc {
-  color: #94a3b8;
-  font-size: 1rem;
-  max-width: 800px;
-  margin: 0 auto 40px auto;
-  line-height: 1.6;
-}
-
-.badge-nosotros {
-  background: rgba(0, 242, 254, 0.15);
-  color: #00f2fe;
-  padding: 6px 18px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  border: 1px solid rgba(0, 242, 254, 0.4);
-  display: inline-block;
-  margin-bottom: 15px;
-  text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
-}
-
-/* Grilla limpia de 6 columnas virtuales para centrar las tarjetas */
-.nosotros-grid-5 {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 25px;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/* Las primeras 3 tarjetas ocupan 2 columnas cada una (3x2 = 6 columnas arriba) */
-.nosotros-grid-5 .punto-card:nth-child(1),
-.nosotros-grid-5 .punto-card:nth-child(2),
-.nosotros-grid-5 .punto-card:nth-child(3) {
-  grid-column: span 2;
-}
-
-/* Las últimas 2 tarjetas ocupan 2 columnas cada una pero empiezan en la col 2 y 4 (quedan centradas abajo) */
-.nosotros-grid-5 .card-centered-left {
-  grid-column: 2 / span 2;
-}
-
-.nosotros-grid-5 .card-centered-right {
-  grid-column: 4 / span 2;
-}
-
-/* Estilo unificado de las tarjetas */
-.punto-card {
-  background: rgba(15, 23, 42, 0.85);
-  border: 1px solid rgba(0, 242, 254, 0.25);
-  border-radius: 16px;
-  padding: 25px 20px;
-  text-align: center;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(10px);
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.punto-card:hover {
-  transform: translateY(-5px);
-  border-color: #00f2fe;
-}
-
-.icon-box {
-  font-size: 2.2rem;
-  color: #00f2fe;
-  margin-bottom: 12px;
-  text-shadow: 0 0 15px rgba(0, 242, 254, 0.6);
-}
-
-.punto-card h4, 
-.punto-card h3 {
-  color: #ffffff;
-  font-size: 1.3rem;
-  font-weight: 800;
-  margin-bottom: 8px;
-}
-
-.punto-card p {
-  color: #94a3b8;
-  font-size: 0.88rem;
-  line-height: 1.4;
-}
-
-/* Celulares / Tablets */
-@media (max-width: 768px) {
-  .nosotros-grid-5 {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-}
-/* --- ESTILOS LIMPIOS PARA LA SECCIÓN NOSOTROS (3 ARRIBA Y 2 ABAJO UNIFORMES) --- */
-
-.nosotros-section {
-  padding: 80px 20px;
-  max-width: 1100px;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-  z-index: 2;
-}
-
-.nosotros-header h2 {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-  font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 15px;
-}
-
-.nosotros-desc {
-  color: #94a3b8;
-  font-size: 1rem;
-  max-width: 800px;
-  margin: 0 auto 40px auto;
-  line-height: 1.6;
-}
-
-.badge-nosotros {
-  background: rgba(0, 242, 254, 0.15);
-  color: #00f2fe;
-  padding: 6px 18px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  border: 1px solid rgba(0, 242, 254, 0.4);
-  display: inline-block;
-  margin-bottom: 15px;
-  text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
-}
-
-/* Fila Superior de 3 columnas */
-.nosotros-fila-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto 25px auto;
-}
-
-/* Fila Inferior de 2 columnas centradas con el mismo tamaño */
-.nosotros-fila-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
-  width: 100%;
-  max-width: 660px; /* Ancho perfecto para que midan igual que las de arriba */
-  margin: 0 auto;
-}
-
-/* Estilo unificado de cada tarjeta */
-.punto-card {
-  background: rgba(15, 23, 42, 0.85);
-  border: 1px solid rgba(0, 242, 254, 0.25);
-  border-radius: 16px;
-  padding: 25px 20px;
-  text-align: center;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(10px);
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.punto-card:hover {
-  transform: translateY(-5px);
-  border-color: #00f2fe;
-}
-
-.icon-box {
-  font-size: 2.2rem;
-  color: #00f2fe;
-  margin-bottom: 12px;
-  text-shadow: 0 0 15px rgba(0, 242, 254, 0.6);
-}
-
-.punto-card h4, 
-.punto-card h3 {
-  color: #ffffff;
-  font-size: 1.3rem;
-  font-weight: 800;
-  margin-bottom: 8px;
-}
-
-.punto-card p {
-  color: #94a3b8;
-  font-size: 0.88rem;
-  line-height: 1.4;
-}
-
-/* Adaptación para pantallas pequeñas */
-@media (max-width: 768px) {
-  .nosotros-fila-3,
-  .nosotros-fila-2 {
-    grid-template-columns: 1fr;
-    max-width: 100%;
-  }
-}
-/* --- ESTILO INTERACTIVO PARA BOTÓN YAPE --- */
-
+/* ESTILO INTERACTIVO PARA BOTÓN YAPE */
 .payment-methods {
   text-align: center;
   margin-top: 12px;
@@ -865,10 +345,113 @@ body {
   transition: all 0.3s ease !important;
 }
 
-/* Efecto al pasar el cursor o tocar */
-.badge-yape:hover,
-.badge-yape:active {
+.badge-yape:hover, .badge-yape:active {
   transform: translateY(-2px) scale(1.04) !important;
   background: #8e2ea5 !important;
   box-shadow: 0 0 15px rgba(113, 36, 132, 0.8), 0 0 25px rgba(113, 36, 132, 0.5) !important;
+}
+
+/* --- SECCIÓN NOSOTROS (3 ARRIBA Y 2 ABAJO PERFECTAMENTE CENTRADAS) --- */
+.nosotros-section {
+  padding: 60px 20px;
+  width: 100% !important;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.nosotros-container {
+  width: 100% !important;
+  margin: 0 auto;
+}
+
+.nosotros-header h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.nosotros-desc {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  max-width: 800px;
+  margin: 0 auto 35px auto;
+  line-height: 1.6;
+}
+
+.badge-nosotros {
+  background: rgba(0, 242, 254, 0.15);
+  color: #00f2fe;
+  padding: 5px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 1px solid rgba(0, 242, 254, 0.4);
+  display: inline-block;
+  margin-bottom: 12px;
+  text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+}
+
+/* Grilla flexible que distribuye 3 tarjetas en la 1ra fila y 2 centradas en la 2da */
+.nosotros-flex-grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 20px !important;
+  width: 100% !important;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.nosotros-flex-grid .punto-card {
+  flex: 1 1 280px !important;
+  max-width: 300px !important;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(0, 242, 254, 0.25);
+  border-radius: 14px;
+  padding: 22px 18px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.nosotros-flex-grid .punto-card:hover {
+  transform: translateY(-4px);
+  border-color: #00f2fe;
+}
+
+.icon-box {
+  font-size: 1.8rem;
+  color: #00f2fe;
+  margin-bottom: 10px;
+  text-shadow: 0 0 12px rgba(0, 242, 254, 0.6);
+}
+
+.punto-card h4, 
+.punto-card h3 {
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.punto-card p {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+/* PIE DE PÁGINA */
+.footer {
+  text-align: center;
+  padding: 25px;
+  background: #05070a;
+  color: #64748b;
+  font-size: 0.85rem;
+  position: relative;
+  z-index: 2;
 }
