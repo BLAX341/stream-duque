@@ -31,8 +31,8 @@
 
     <nav class="nav-menu" id="navMenu">
       <a href="#inicio" onclick="toggleMenu()">Inicio</a>
-      <a href="#nosotros" onclick="toggleMenu()">Nosotros</a>
       <a href="#productos" onclick="toggleMenu()">Planes</a>
+      <a href="#nosotros" onclick="toggleMenu()">Nosotros</a>
     </nav>
   </header>
 
@@ -128,16 +128,17 @@
           </ul>
           <a href="https://wa.me/51990516065?text=Hola,%20deseo%20comprar%20Crunchyroll" class="btn-card btn-crunchy" target="_blank">Comprar Perfil</a>
           <div class="payment-methods">
-            <span class="badge-yape-wrapper">
-              <a href="https://wa.me/51990516065?text=Hola,%20deseo%20pagar%20por%20YAPE%20mi%20perfil%20de%20Crunchyroll" class="badge-yape" target="_blank">
-                <i class="fas fa-mobile-alt"></i> Pagar con YAPE
-              </a>
-            </span>
+            <a href="https://wa.me/51990516065?text=Hola,%20deseo%20pagar%20por%20YAPE%20mi%20perfil%20de%20Crunchyroll" class="badge-yape" target="_blank">
+              <i class="fas fa-mobile-alt"></i> Pagar con YAPE
+            </a>
           </div>
         </div>
       </div>
 
-<!-- SECCIÓN NOSOTROS (3 ARRIBA Y 2 ABAJO EN FORMATO UNIFORME) -->
+    </div> <!-- Cierre correcto de products-grid -->
+  </section>
+
+  <!-- SECCIÓN NOSOTROS (3 ARRIBA Y 2 ABAJO UNIFORMES Y CENTRADAS) -->
   <section class="nosotros-section" id="nosotros">
     <div class="nosotros-container">
       <div class="nosotros-header">
@@ -148,48 +149,41 @@
         </p>
       </div>
 
-      <!-- CUADRICULA COMPACTA DE 5 TARJETAS -->
-      <div class="nosotros-grid">
-        
-        <!-- Tarjeta 1 -->
+      <!-- CUADRICULA FLEXIBLE DE 5 TARJETAS COMPACTAS -->
+      <div class="nosotros-flex-grid">
         <div class="punto-card">
           <div class="icon-box"><i class="fas fa-bolt"></i></div>
           <h4>Entrega Inmediata</h4>
           <p>Activación rápida tras confirmar tu pago por WhatsApp.</p>
         </div>
 
-        <!-- Tarjeta 2 -->
         <div class="punto-card">
           <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
           <h4>Garantía 100%</h4>
           <p>Soporte técnico activo y respuesta rápida durante todo tu mes.</p>
         </div>
 
-        <!-- Tarjeta 3 -->
         <div class="punto-card">
           <div class="icon-box"><i class="fas fa-users"></i></div>
           <h3>+1,000</h3>
           <p>Clientes Satisfechos</p>
         </div>
 
-        <!-- Tarjeta 4 -->
         <div class="punto-card">
           <div class="icon-box"><i class="fas fa-check-circle"></i></div>
           <h3>99.9%</h3>
           <p>Cuentas Estables</p>
         </div>
 
-        <!-- Tarjeta 5 -->
         <div class="punto-card">
           <div class="icon-box"><i class="fas fa-headset"></i></div>
           <h3>24/7</h3>
           <p>Soporte por WhatsApp</p>
         </div>
-
       </div>
+
     </div>
   </section>
-  
 
   <!-- PIE DE PÁGINA -->
   <footer class="footer">
