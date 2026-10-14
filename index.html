@@ -212,5 +212,36 @@
       "retina_detect": true
     });
   </script>
+  <!-- 1. Librería oficial para conectar con Supabase y PostgreSQL -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  
+  <!-- 2. Tu archivo de conexión que acabamos de crear -->
+  <script src="./database/app.js"></script>
+
+  <!-- 3. Tus partículas flotantes que ya tenías -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('active');
+    }
+
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#00f2fe" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.6, "random": true },
+        "size": { "value": 3, "random": true },
+        "line_linked": { "enable": false },
+        "move": { "enable": true, "speed": 1.5, "direction": "top", "random": true, "straight": false, "out_mode": "out" }
+      },
+      "interactivity": { "events": { "onhover": { "enable": false } } },
+      "retina_detect": true
+    });
+  </script>
+  <!-- Conexión a la Base de Datos PostgreSQL / Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./database/app.js"></script>
 </body>
 </html>
