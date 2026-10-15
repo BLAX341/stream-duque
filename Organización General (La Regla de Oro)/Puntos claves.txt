@@ -1,0 +1,50 @@
+1. Control Estricto de Clientes y Vencimientos 📅
+Llevar la cuenta de cuándo vence la suscripción de cada cliente es vital para evitar
+ cortes innecesarios o que sigan usando el servicio sin pagar.
+
+
+Fechas de corte: Crea una tabla en Excel, Google Sheets o Notion donde anotes:
+
+Nombre del cliente y su número de WhatsApp.
+
+Cuenta / Perfil asignado.
+
+Fecha de compra y Fecha exacta de vencimiento.
+
+Recordatorios de renovación: Envíales un mensaje automático o manual 2 días antes de que venza su mes:
+
+"¡Hola [Nombre]! 👋 Tu perfil de Netflix vence en 2 días. Para renovar y mantener tu 
+mismo perfil y PIN sin interrupciones, puedes realizar tu YAPE aquí..."
+
+
+
+2. Reglas Claras del Servicio (Para evitar bloqueos) ⚠️
+Para proteger las cuentas principales y evitar que un cliente cambie claves o comparta 
+el perfil con más personas, establece reglas desde el primer día:
+
+1 Perfil = 1 Dispositivo: Aclara que el perfil es para uso en una sola pantalla a la vez.
+
+Prohibido modificar la cuenta: Nadie debe cambiar la contraseña principal, el correo, ni el PIN de otros perfiles.
+
+Política de garantía: Si una cuenta cae o tiene problemas técnicos, diles que tienen soporte 
+en un plazo máximo de 12 a 24 horas para solucionar o reasignar perfil.
+
+
+
+3. Manejo de Caídas de Cuentas o "Hogar Netflix" 🛡️
+A veces las plataformas (especialmente Netflix) solicitan verificar 
+el "Hogar" o enviar un código de confirmación al correo principal.
+
+Centraliza los correos: Asegúrate de tener acceso rápido a los correos electrónicos donde compraste 
+las cuentas para poder sacar los códigos de verificación de inmediato cuando un cliente te lo pida.
+
+Respuesta rápida: Si un cliente te pide un código de actualización de hogar,
+ responderle rápido genera mucha confianza y fidelidad.
+
+
+4. Estrategia de Precios y Ganancia (Margen) 💰
+Combos / Combos Stream: Ofrece paquetes con descuento si compran más de un servicio
+ (por ejemplo: Netflix + Disney+ por un precio especial).
+
+Reinvierte al inicio: Usa tus primeras ganancias para comprar
+ más cuentas completas y ampliar tu stock disponible.

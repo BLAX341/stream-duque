@@ -1,0 +1,103 @@
+1. Organización General (La Regla de Oro)
+Para cada cuenta completa que compres (por ejemplo, una cuenta de Netflix), 
+tendrás un número determinado de perfiles disponibles para revender.
+
+Netflix: Hasta 5 perfiles por cuenta.
+
+Disney+ / Star+: Hasta 7 perfiles por cuenta.
+
+Prime Video: Hasta 6 perfiles por cuenta.
+
+Crunchyroll: Hasta 5 perfiles (según el plan Fan Mega).
+
+💡 Consejo: Guarda un registro en Excel o Notion anotando:
+
+Correo de la cuenta | Contraseña principal | Perfil # (Nombre) | PIN del perfil | Cliente a quien se lo vendiste | Fecha de vencimiento.
+
+
+
+2. Cómo crear perfiles y ponerles PIN / Contraseña
+🔴 Netflix
+Entra a Netflix e inicia sesión con la cuenta principal.
+
+Ve a la sección de administración de perfiles y haz clic en "Agregar perfil".
+
+Ponle de nombre el número de perfil o el nombre del cliente (por ejemplo: Perfil 1 - Duque).
+
+Para ponerle PIN al perfil:
+
+Entra a la opción Cuenta (Account).
+
+Desplázate hacia abajo hasta la sección Perfil y control parental.
+
+Selecciona el perfil que acabas de crear y busca la opción Bloqueo de perfil (Profile Lock).
+
+Haz clic en Cambiar, ingresa la contraseña principal de la cuenta Netflix y luego crea un PIN de 4 dígitos.
+
+¡Listo! Ese PIN de 4 dígitos es el que le entregarás a tu cliente junto con el correo y clave de la cuenta.
+
+🔵 Disney+
+Inicia sesión en la cuenta de Disney+.
+
+Ve a la esquina superior derecha donde está el ícono de perfil y selecciona "Editar perfiles".
+
+Selecciona "Crear perfil" y asígnale un nombre (ejemplo: Perfil 1).
+
+Para ponerle PIN al perfil:
+
+En la misma pantalla de edición de ese perfil, desplázate hasta la opción PIN de perfil.
+
+Actívalo, ingresa la clave de la cuenta principal para confirmar y asigna un PIN de 4 dígitos.
+
+Guarda los cambios.
+
+💙 Prime Video
+Entra a Amazon Prime Video en el navegador o app.
+
+Haz clic en el nombre de perfil actual y selecciona "Mis perfiles" > "Añadir perfil".
+
+Ponle nombre (ejemplo: Perfil 1) y guarda.
+
+Para ponerle PIN al perfil:
+
+Ve a Configuración > pestaña Control parental.
+
+Prime Video te permite configurar un PIN de Prime Video.
+
+Nota importante en Prime Video: El PIN suele aplicar globalmente a la cuenta para restricciones de compra o acceso a perfiles bloqueados según la configuración de la cuenta.
+
+🟠 Crunchyroll
+Entra a Crunchyroll y ve a la sección de Perfiles.
+
+Selecciona "Añadir perfil" o "Crear perfil" y asigna el avatar y nombre (ejemplo: Perfil 1).
+
+Nota: Crunchyroll permite múltiples perfiles para mantener historiales de reproducción separados.
+ Actualmente no cuenta con un sistema de PIN individual por perfil como Netflix, por lo que a los clientes
+ de Crunchyroll se les indica la norma de respetar únicamente el perfil que se les asignó.
+
+
+
+
+3. ¿Cómo le entregas los datos a tu cliente?
+Cuando el cliente te pague por YAPE y te envíe el comprobante, le mandarás un mensaje con este formato estándar:
+
+🎬 TUS DATOS DE ACCESO - DUQUE STREAM 🎬
+
+📌 Servicio: Netflix
+
+📧 Correo: ejemplo.cuentas@gmail.com
+
+🔑 Contraseña: DuqueStream2026*
+
+👤 Perfil asignado: Perfil 1
+
+🔒 PIN del perfil: 1234
+
+⚠️ Reglas del servicio:
+
+Ingrese únicamente al perfil asignado.
+
+No cambie la contraseña ni los datos de la cuenta.
+
+No altere el PIN de otros perfiles.
+🛡️ Soporte garantizado durante todo el mes de suscripción.

@@ -1,0 +1,46 @@
+1.Gestión del Stock y "Cuentas Lista" 📦
+No sobrevendas: Vende únicamente los perfiles que tengas activos y creados.
+
+Tener repuesto (Backup): En la medida de lo posible, ten siempre una cuenta adicional de respaldo o lista para activar.
+ Si a un cliente se le cierra la sesión o hay un fallo masivo en un proveedor, podrás migrarlo de inmediato a otro perfil sin hacerlo esperar.
+
+2. Estrategia de Marketing y Promoción 📲
+Para que tu web y tus estados de WhatsApp vendan solos:
+
+Publicidad en Redes: Publica estados diarios en WhatsApp, Instagram o Facebook con los logos de las series/películas
+ del momento (estrenos de cine, partidos de fútbol en vivo, etc.) junto con tu frase de llamado a la acción:
+ "Míralo hoy en DUQUE STREAM por solo S/ X.XX".
+
+Programa de Referidos: Dile a tus clientes satisfechos: "Si me traes a 1 amigo que compre un perfil,
+ te descuentro S/ 2.00 en tu siguiente renovación". Eso te conseguirá clientes nuevos sin gastar en publicidad.
+
+3. Seguridad y Buenas Prácticas Tecnológicas 🔒
+Contraseñas Seguras: Usa contraseñas distintas para la administración de tus cuentas principales. 
+No uses la misma clave para todas las cuentas de la tienda.
+
+Verificación en Dos Pasos (2FA): Activa la verificación en dos pasos en los correos corporativos/principales 
+que uses para comprar las suscripciones, para evitar que te las hackeen.
+
+4. Atención al Cliente y Resolución de Conflictos 🤝
+Empatía y Calma: Si un cliente te escribe molesto porque una cuenta falló, la clave es responder rápido y amable:
+ "Hola [Nombre], lamento el inconveniente. Ya lo estoy revisando y en breve te doy la solución".
+
+Soporte Garantizado: Un cliente bien atendido en un momento de falla se convierte en un cliente fiel para siempre.
+
+
+
+
+💡 Resumen para tu documento de texto:
+LISTA DE CHEQUEO - DUQUE STREAM:
+
+✅ Base de datos y Web conectadas (Supabase + GitHub Pages).
+
+🤖 Bot de WhatsApp configurado (ManyChat).
+
+📋 Registro de Excel (Clientes, perfiles, PINs, vencimientos).
+
+📌 Reglas del servicio (1 pantalla por usuario, no cambiar claves).
+
+📅 Avisos de renovación 2 días antes del vencimiento.
+
+🚀 Promoción activa en redes sociales con estrenos del mes.
