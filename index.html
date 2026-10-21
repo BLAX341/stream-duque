@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <lille>DUQUE STREAM - Cuentas y Perfiles</lille>
+  <title>DUQUE STREAM - Cuentas y Perfiles</title>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
   <!-- FontAwesome Icons -->
@@ -15,6 +15,30 @@
 
   <!-- PARTÍCULAS BRILLANTES DE FONDO -->
   <div id="particles-js" class="particles-container"></div>
+
+  <!-- BOTÓN FLOTANTE LATERAL PARA ABRIR MENÚ DE CATEGORÍAS -->
+  <button class="open-sidebar-btn" onclick="toggleSidebar()">
+    <i class="fas fa-th-large"></i> Categorías
+  </button>
+
+  <!-- PANEL LATERAL DESPLEGABLE (SIDEBAR DRAWER) -->
+  <aside id="mySidebar" class="sidebar-drawer">
+    <a href="javascript:void(0)" class="close-sidebar-btn" onclick="toggleSidebar()">&times;</a>
+    <div class="sidebar-header">
+      <h2>DUQUE STORE</h2>
+      <p>Tu tienda multicategoría</p>
+    </div>
+    <hr class="sidebar-divider">
+    <nav class="sidebar-links">
+      <a href="#productos" onclick="toggleSidebar()"><i class="fas fa-tv"></i> Streaming</a>
+      <a href="#ropa" onclick="toggleSidebar()"><i class="fas fa-tshirt"></i> Ropa</a>
+      <a href="#bisuteria" onclick="toggleSidebar()"><i class="fas fa-gem"></i> Bisutería</a>
+      <a href="#joyeria" onclick="toggleSidebar()"><i class="fas fa-ring"></i> Joyería</a>
+    </nav>
+  </aside>
+
+  <!-- CAPA DE SOMBRA (OVERLAY) AL ABRIR EL SIDEBAR -->
+  <div id="sidebarOverlay" class="sidebar-overlay" onclick="toggleSidebar()"></div>
 
   <!-- CABECERA MÓVIL -->
   <header class="navbar-mobile">
@@ -138,7 +162,7 @@
     </div> <!-- Cierre correcto de products-grid -->
   </section>
 
-  <!-- SECCIÓN NOSOTROS (3 ARRIBA Y 2 ABAJO UNIFORMES Y CENTRADAS) -->
+  <!-- SECCIÓN NOSOTROS -->
   <section class="nosotros-section" id="nosotros">
     <div class="nosotros-container">
       <div class="nosotros-header">
@@ -190,14 +214,29 @@
     <p>&copy; 2026 DUQUE STREAM. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- Script de partículas -->
+  <!-- LIBRERÍAS DE JS -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./database/app.js"></script>
+
+  <!-- SCRIPTS DE FUNCIONALIDAD -->
   <script>
+    // Menú hamburguesa superior
     function toggleMenu() {
       const menu = document.getElementById('navMenu');
       menu.classList.toggle('active');
     }
 
+    // Menú lateral desplegable (Sidebar Drawer)
+    function toggleSidebar() {
+      const sidebar = document.getElementById('mySidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+      
+      sidebar.classList.toggle('active');
+      overlay.classList.toggle('active');
+    }
+
+    // Fondo de Partículas
     particlesJS("particles-js", {
       "particles": {
         "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
@@ -212,36 +251,5 @@
       "retina_detect": true
     });
   </script>
-  <!-- 1. Librería oficial para conectar con Supabase y PostgreSQL -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  
-  <!-- 2. Tu archivo de conexión que acabamos de crear -->
-  <script src="./database/app.js"></script>
-
-  <!-- 3. Tus partículas flotantes que ya tenías -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById('navMenu');
-      menu.classList.toggle('active');
-    }
-
-    particlesJS("particles-js", {
-      "particles": {
-        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
-        "color": { "value": "#00f2fe" },
-        "shape": { "type": "circle" },
-        "opacity": { "value": 0.6, "random": true },
-        "size": { "value": 3, "random": true },
-        "line_linked": { "enable": false },
-        "move": { "enable": true, "speed": 1.5, "direction": "top", "random": true, "straight": false, "out_mode": "out" }
-      },
-      "interactivity": { "events": { "onhover": { "enable": false } } },
-      "retina_detect": true
-    });
-  </script>
-  <!-- Conexión a la Base de Datos PostgreSQL / Supabase -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="./database/app.js"></script>
 </body>
 </html>
