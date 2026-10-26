@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DUQUE STORE - Perfumes Árabes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div id="particles-js" class="particles-container"></div>
+
+  <!-- BOTÓN VOLVER AL INICIO -->
+  <a href="index.html" class="open-sidebar-btn" style="text-decoration: none;">
+    <i class="fas fa-arrow-left"></i> Volver al Inicio
+  </a>
+
+  <!-- SECCIÓN PERFUMES INDEPENDIENTE -->
+  <section class="upcoming-section section-perfumes" style="margin-top: 100px;">
+    <div class="upcoming-overlay">
+      <span class="badge-coming">DUQUE STORE</span>
+      <h2>Perfumes Árabes Exclusivos</h2>
+      <p>Fragancias de lujo, alta fijación y las mejores marcas del Medio Oriente.</p>
+      <div class="banner-pronto">
+        <i class="fas fa-clock"></i> ¡MUY PRONTO!
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#00f2fe" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.6, "random": true },
+        "size": { "value": 3, "random": true },
+        "move": { "enable": true, "speed": 1.5, "direction": "top", "random": true }
+      }
+    });
+  </script>
+</body>
+</html>
